@@ -1,0 +1,75 @@
+
+html {
+  box-sizing: border-box;
+  opacity: .9;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Libre Baskerville', serif;
+  background-color: #2a634d;
+  background-image: url(topography.svg); /* attribution: https://www.heropatterns.com/ */ 
+  margin: 0;
+}
+
+/* opacity container, very useful indeed! */
+.container {
+  opacity: 1;
+  padding: 80px;
+}
+
+/* the real container */
+.quote-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: auto;
+  min-height: 200px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 .5px 10px 5px;
+}
+
+/* the quote text itself */
+.quote {
+  font-size: 1.5rem;
+}
+
+/* TODO: dynamically change the quotes based on quote length */
+.long-quote {
+  font-size: 1rem;
+}
+
+/* TODO: alter this so that it sits at top-left-corner of quote-card */
+.fa-quote-left {
+  font-size: 2rem;
+}
+
+.author {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* 
+ ***** MEDIA ******
+ **** QUERIES *****
+ */
+
+ @media screen and (max-width: 1000px) {
+
+   .quote-card {
+     margin: auto 10px;
+   }
+
+   .quote {
+     font-size: 1rem;
+   }
+ }
