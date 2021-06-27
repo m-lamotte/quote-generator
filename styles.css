@@ -15,6 +15,29 @@ body {
   margin: 0;
 }
 
+button {
+  cursor: pointer;
+  padding: 0px 15px 0px 15px;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background: rgb(8, 36, 19);
+  outline: none;
+  box-shadow: 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
+}
+
+button:hover { 
+  filter: brightness(120%);
+}
+
+
+button:active {
+  transform: translate(0.05rem, 0.05rem);
+  box-shadow: 0 0;
+}
+
 /* opacity container, very useful indeed! */
 .container {
   opacity: 1;
@@ -26,14 +49,13 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  align-items: center;
   justify-content: center;
   padding: 20px;
   width: auto;
   min-height: 200px;
   background-color: #fff;
   border-radius: 3px;
-  box-shadow: 0 .5px 10px 5px;
+  box-shadow: 5px 5px 20px 5px;
 }
 
 /* the quote text itself */
@@ -43,7 +65,7 @@ body {
 
 /* TODO: dynamically change the quotes based on quote length */
 .long-quote {
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 /* TODO: alter this so that it sits at top-left-corner of quote-card */
@@ -58,6 +80,19 @@ body {
   font-style: italic;
 }
 
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.twitter-button:hover {
+  color: #38a1f3;
+}
+
+.fa-twitter {
+  font-size: 1.5rem;
+}
 /* 
  ***** MEDIA ******
  **** QUERIES *****
