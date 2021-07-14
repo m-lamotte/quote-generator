@@ -93,6 +93,24 @@ button:active {
 .fa-twitter {
   font-size: 1.5rem;
 }
+
+/* Loader */
+
+.loader {
+  border: 0px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #76a6c7; /* Blue */
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
 /* 
  ***** MEDIA ******
  **** QUERIES *****
