@@ -8,14 +8,13 @@ const laoder = document.getElementById('loader');
 
 let apiQuotes = [];
 
-// Show the loader
-function loading() {
+function showLoadingSpinner() {
     loader.hidden = false;
     parentContainer.hidden = true;
 }
 
-// Hide the loader - setTimeout will keep the loader going for 1.3s until it ends
-function loadingComplete() {
+// setTimeout will keep the loader going for 1.3s until it ends
+function removeLoadingSpinner() {
 
     setTimeout(function() {
         parentContainer.hidden = false;
@@ -27,7 +26,7 @@ function loadingComplete() {
 // Show new quote
 function newQuote() {
 
-    loading();
+    showLoadingSpinner();
 
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
 
@@ -49,14 +48,14 @@ function newQuote() {
 
     // Set quote, hide loadee
     quoteText.textContent = quote.text;
-    loadingComplete();
+    removeLoadingSpinner();
 }
 
 // Get quotes from API
 // Asynchronous fetch request within a try-catch statement
 async function getQuotes() {
 
-    loading();
+    showLoadingSpinner();
 
     const apiUrl = 'https://type.fit/api/quotes';
 
@@ -69,7 +68,7 @@ async function getQuotes() {
         newQuote();
     }
     catch (error) {
-        // Catch error
+        console.log('Not goin\' good');
     }
 }
 
@@ -85,5 +84,5 @@ newQuoteButton.addEventListener('click', newQuote);
 twitterButton.addEventListener('click', tweetQuote);
 
 // On load
-loading()
+showLoadingSpinner();
 getQuotes();
